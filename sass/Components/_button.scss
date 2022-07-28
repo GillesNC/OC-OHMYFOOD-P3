@@ -1,0 +1,12 @@
+.explore {
+    &__button {
+        @include button; 
+    }
+}
+
+.menu {
+    &__button {
+        @include button;
+        width: 250px;
+    }
+}

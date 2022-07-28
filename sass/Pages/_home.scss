@@ -1,0 +1,161 @@
+// Section géolocalisation
+.geolocalisation {
+    background-color: #e0e0e0;
+    @include flex-center;
+    width: 100%;
+    height: 50px;
+    font-size: 20px;
+    color: #4d4d4d;
+
+    &__label {
+        font-weight: 600;
+        margin-left: 20px;
+    }
+
+}
+
+// Section Explorer vos restaurants
+.container-explore {
+    background-color: $colour-background;
+    height: 300px;
+
+    .explore {
+        display: flex;
+        align-items: center;
+        flex-direction: column;
+        justify-content: space-evenly;
+        height: 100%;
+    }
+
+    .explore h1 {
+        font-family: 'Roboto', sans-serif;
+        text-align: center;
+        width: 70%;
+    }
+
+    .explore p {
+        margin: 0;
+        width: 95%;
+        text-align: center;
+        font-size: 20px;
+        font-weight: 400;
+        color: #4d4d4d;
+    }
+}
+
+// Section Fonctionnement
+.container-functioning {
+    margin: 50px 20px 50px 20px;
+    height: 300px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+
+    .choice {
+        display: flex;
+        align-items: center;
+        background-color: $colour-background;
+        height: 60px;
+        border-radius: 15px;
+        box-shadow: $shadow;
+
+        &__number {
+            background-color: $colour-primary;
+            margin-left: -10px;
+            margin-right: 15px;
+            color: white;
+            text-align: center;
+            width: 18px;
+            padding: 3px;
+            border-radius: 54%;
+            font-family: 'Roboto', sans-serif;
+        }
+
+        &__icon {
+            color: #4d4d4d;
+            margin-right: 15px;
+        }
+
+        &__text {
+            font-size: 15px;
+            font-weight: 700;
+        }
+    }
+
+    .choice:hover {
+        background-color: #9356DC25;
+        cursor: pointer;
+    }
+
+    .choice:hover i {
+        color: $colour-primary;
+    }
+}
+
+// Section Restaurant
+.container-restaurant {
+    background-color: $colour-background;
+    padding: 30px 20px 30px 20px;
+    height: 1200px;
+
+    .card {
+        display: flex;
+        flex-direction: column;
+        height: 100%;
+        justify-content: space-around;
+
+        &__element {
+            display: flex;
+            flex-direction: column;
+            border-radius: 20px;
+            background-color: white;
+            width: auto;
+            height: 250px;
+            box-sizing: border-box;
+            box-shadow: $shadow; 
+            overflow: hidden;
+        }
+
+        &__element:hover {
+            transform:scale(1.05);
+            transition: 800ms;
+        }
+
+        &__link {
+            text-decoration: none;
+        }
+
+        &__items {
+            display: flex;
+            justify-content: space-between;
+            margin: 15px;
+        }
+
+        &__image {
+            border-radius: 20px 20px 0px 0px;
+            width: 100%;
+            height: 160px;
+            object-fit: cover;
+        }
+
+        &__title h3 {
+            font-weight: 700;
+            font-size: 20px;
+            color: black;
+        }
+
+        &__items p {
+            font-weight: 400;
+            color: black;
+        }
+
+        &__icon-heart {
+            font-size: 25px;
+            color: black;
+            position: relative;
+            right: 10px;
+            top: 10px;           
+        }
+    }
+
+}

@@ -1,0 +1,21 @@
+@mixin flex-center {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+@mixin button {
+    padding: 16px 28px;
+    border: none;
+    border-radius: 50px;
+    background-color: #686868;
+    background: linear-gradient(-5deg, $colour-primary 10%, $colour-secondary);
+    color: $colour-text-button;
+
+    &:hover {
+        background: linear-gradient(-5deg, $colour-primary 10%, $colour-secondary, #ffffff02 140%);
+        box-shadow: $shadow;
+        transition-duration: 0.15s;
+        cursor: pointer;
+    }
+}
