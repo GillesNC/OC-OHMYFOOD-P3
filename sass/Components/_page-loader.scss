@@ -1,11 +1,11 @@
 //Animation du background
 .container-loader {
-    background-color: #ffffffe9;
+    background-color: #ffffffef;
     position: fixed;
     inset: 0;
     height: 100vh;
     z-index: 2;
-    animation: background-disappear 0.5s 3s both;
+    animation: background-disappear 0.4s 1.5s forwards;
 }
 
 @keyframes background-disappear {
@@ -26,8 +26,8 @@
 
 .circle {
     background-color: $colour-primary;
-    height: 40px;
-    width: 40px;
+    height: 60px;
+    width: 60px;
     border-radius: 50%;
     transform: scale(0);
     animation: grow 2s linear infinite;
@@ -44,7 +44,7 @@
     animation-delay: 1s;
     position: relative;
     top: 20px;
-    right: 30px;
+    right: 60px;
 }
 
 @keyframes rotate {

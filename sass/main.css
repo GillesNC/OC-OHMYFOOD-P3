@@ -1,11 +1,11 @@
 .container-loader {
-  background-color: rgba(255, 255, 255, 0.9137254902);
+  background-color: rgba(255, 255, 255, 0.937254902);
   position: fixed;
   inset: 0;
   height: 100vh;
   z-index: 2;
-  -webkit-animation: background-disappear 0.5s 3s both;
-          animation: background-disappear 0.5s 3s both;
+  -webkit-animation: background-disappear 0.4s 1.5s forwards;
+          animation: background-disappear 0.4s 1.5s forwards;
 }
 
 @-webkit-keyframes background-disappear {
@@ -31,8 +31,8 @@
 
 .circle {
   background-color: #9356DC;
-  height: 40px;
-  width: 40px;
+  height: 60px;
+  width: 60px;
   border-radius: 50%;
   transform: scale(0);
   -webkit-animation: grow 2s linear infinite;
@@ -52,7 +52,7 @@
           animation-delay: 1s;
   position: relative;
   top: 20px;
-  right: 30px;
+  right: 60px;
 }
 
 @-webkit-keyframes rotate {
@@ -107,6 +107,115 @@
   cursor: pointer;
 }
 
+.card__heart {
+  position: relative;
+}
+.card__icon-heart {
+  font-size: 25px;
+  color: black;
+  background-color: #ffffff;
+  position: absolute;
+  right: 10px;
+  top: 10px;
+}
+.card__icon-heart:hover {
+  opacity: 0;
+}
+.card__icon-heart-gradient {
+  font-size: 25px;
+  -webkit-background-clip: text;
+          background-clip: text;
+  color: transparent;
+  background-image: linear-gradient(-5deg, #9356DC 10%, #FF79DA);
+  position: absolute;
+  right: 10px;
+  top: 10px;
+}
+
+.menu__heart {
+  position: relative;
+}
+.menu__icon-heart {
+  font-size: 25px;
+  color: black;
+  background-color: #f2f2f2;
+  position: absolute;
+  right: 10px;
+  top: -10px;
+}
+.menu__icon-heart:hover {
+  opacity: 0;
+}
+.menu__icon-heart-gradient {
+  font-size: 25px;
+  -webkit-background-clip: text;
+          background-clip: text;
+  color: transparent;
+  background-image: linear-gradient(-5deg, #9356DC 10%, #FF79DA);
+  position: absolute;
+  right: 10px;
+  top: -10px;
+}
+
+.dish__slide-effect-1 {
+  -webkit-animation: slide-bottom 1.5s 1s ease-in-out both;
+          animation: slide-bottom 1.5s 1s ease-in-out both;
+}
+.dish__slide-effect-2 {
+  -webkit-animation: slide-bottom 1.5s 1.5s ease-in-out both;
+          animation: slide-bottom 1.5s 1.5s ease-in-out both;
+}
+.dish__slide-effect-3 {
+  -webkit-animation: slide-bottom 1.5s 2s ease-in-out both;
+          animation: slide-bottom 1.5s 2s ease-in-out both;
+}
+.dish__validation {
+  background-color: #99E2D0;
+  height: auto;
+  width: 60px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-right: -60px;
+  transition-duration: 1s;
+}
+.dish__icon-validation {
+  color: white;
+  font-size: 20px;
+}
+.dish__element:hover .dish__validation {
+  margin-right: 0;
+}
+.dish__element:hover .dish__icon-validation {
+  transform: rotate(360deg);
+  transition-duration: 1s;
+}
+
+@-webkit-keyframes slide-bottom {
+  0% {
+    transform: translateY(50px);
+    filter: blur(1px);
+    opacity: 0;
+  }
+  100% {
+    transform: translateY(0px);
+    filter: blur(0);
+    opacity: 1;
+  }
+}
+
+@keyframes slide-bottom {
+  0% {
+    transform: translateY(50px);
+    filter: blur(1px);
+    opacity: 0;
+  }
+  100% {
+    transform: translateY(0px);
+    filter: blur(0);
+    opacity: 1;
+  }
+}
 html {
   scroll-behavior: smooth;
 }
@@ -358,6 +467,25 @@ button {
   -o-object-fit: cover;
      object-fit: cover;
 }
+.container-restaurant .card__imageholder {
+  position: relative;
+}
+.container-restaurant .card__imageholder .card__label {
+  position: absolute;
+  right: 10px;
+  top: 15px;
+  background-color: #99E2D0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 90px;
+  height: 30px;
+  border-radius: 3px;
+  box-shadow: 0px 5px 5px 0px rgba(0, 0, 0, 0.15);
+  font-family: "Roboto", sans-serif;
+  color: #16856b;
+  font-weight: 500;
+}
 .container-restaurant .card__title h3 {
   font-weight: 700;
   font-size: 20px;
@@ -366,13 +494,6 @@ button {
 .container-restaurant .card__items p {
   font-weight: 400;
   color: black;
-}
-.container-restaurant .card__icon-heart {
-  font-size: 25px;
-  color: black;
-  position: relative;
-  right: 10px;
-  top: 10px;
 }
 
 .menu {
@@ -391,12 +512,6 @@ button {
   align-items: center;
   justify-content: space-between;
   margin-bottom: 10px;
-}
-.menu__icon-heart {
-  font-size: 25px;
-  color: black;
-  position: relative;
-  right: 30px;
 }
 .menu h2 {
   color: #4d4d4d;
@@ -424,15 +539,23 @@ button {
   flex-direction: column;
   margin-bottom: 25px;
 }
+.dish__text {
+  display: flex;
+  flex-direction: column;
+  flex-grow: 1;
+  padding: 10px;
+  text-overflow: ellipsis;
+  overflow: hidden;
+}
 .dish__element {
   display: flex;
-  justify-content: space-between;
   background-color: white;
-  padding: 10px;
   border-radius: 10px;
   line-height: 1.5;
   box-shadow: 0px 5px 5px 0px rgba(0, 0, 0, 0.15);
   margin-bottom: 20px;
+  overflow: hidden;
+  cursor: pointer;
 }
 .dish__element h3 {
   font-weight: 600;
@@ -449,4 +572,5 @@ button {
   font-family: "Roboto", sans-serif;
   font-weight: bold;
   font-size: 15px;
+  padding: 10px;
 }/*# sourceMappingURL=main.css.map */

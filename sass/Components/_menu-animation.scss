@@ -1,0 +1,52 @@
+.dish {
+    &__slide-effect-1 {
+        animation: slide-bottom 1.5s 1s ease-in-out both;
+    }
+
+    &__slide-effect-2 {
+        animation: slide-bottom 1.5s 1.5s ease-in-out both;
+    }
+
+    &__slide-effect-3 {
+        animation: slide-bottom 1.5s 2s ease-in-out both;
+    }
+
+    &__validation {
+        background-color: $colour-tertiary;
+        height: auto;
+        width: 60px;
+        @include flex-center;
+        margin-right: -60px;
+        transition-duration: 1s;
+    }
+
+    &__icon-validation {
+        color: white;
+        font-size: 20px;
+    }
+
+    &__element:hover .dish__validation {
+        margin-right: 0;
+    }
+
+    &__element:hover .dish__icon-validation {
+        transform: rotate(360deg);
+        transition-duration: 1s;
+    }
+
+
+}
+
+@keyframes slide-bottom {
+    0% {
+        transform: translateY(50px);
+        filter: blur(1px);
+        opacity: 0;
+    }
+
+    100% {
+        transform: translateY(0px);
+        filter: blur(0);
+        opacity: 1;
+    }
+  }

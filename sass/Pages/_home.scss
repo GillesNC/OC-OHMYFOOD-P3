@@ -138,6 +138,25 @@
             object-fit: cover;
         }
 
+        &__imageholder {
+            position: relative;
+
+            & .card__label {
+                position: absolute;
+                right: 10px;
+                top: 15px;
+                background-color: $colour-tertiary;
+                @include flex-center;
+                width: 90px;
+                height: 30px;
+                border-radius: 3px;
+                box-shadow: $shadow;
+                font-family: "Roboto", sans-serif;
+                color: #16856b;
+                font-weight: 500;
+            }
+        }
+
         &__title h3 {
             font-weight: 700;
             font-size: 20px;
@@ -147,14 +166,6 @@
         &__items p {
             font-weight: 400;
             color: black;
-        }
-
-        &__icon-heart {
-            font-size: 25px;
-            color: black;
-            position: relative;
-            right: 10px;
-            top: 10px;           
         }
     }
 
