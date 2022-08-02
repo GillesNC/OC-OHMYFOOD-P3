@@ -303,7 +303,7 @@ p {
 }
 
 button {
-  font-family: "Roboto" sans-serif;
+  font-family: "Roboto", sans-serif;
   font-weight: 550;
   font-size: 14px;
 }
