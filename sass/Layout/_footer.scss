@@ -44,5 +44,17 @@
                 color: $colour-primary;
             }
     }
+}
 
+// Responsive Desktop
+
+@media screen and (min-width: 993px) and (max-width:1980px) {
+    .footer {
+        @include flex-center;
+
+        .footer-nav {
+            @include flex-center;
+            font-size: large;
+        }
+    }
 }

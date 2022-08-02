@@ -1,6 +1,7 @@
 .card {
     &__heart {
         position: relative;
+        cursor: pointer;
     }
     
     &__icon-heart {
@@ -30,6 +31,7 @@
 .menu {
     &__heart {
         position: relative;
+        cursor: pointer;
     }
     
     &__icon-heart {

@@ -11,6 +11,10 @@
         animation: slide-bottom 1.5s 2s ease-in-out both;
     }
 
+    &__slide-effect-4 {
+        animation: slide-bottom 1.5s 2.5s ease-in-out both;
+    }
+
     &__validation {
         background-color: $colour-tertiary;
         height: auto;
@@ -50,3 +54,39 @@
         opacity: 1;
     }
   }
+
+  // Responsive Desktop
+
+@media screen and (min-width: 993px) and (max-width:1980px) {
+    .dish {
+        &__slide-effect-1 {
+            animation: scale-up 1.5s 1s ease-in-out both;
+        }
+    
+        &__slide-effect-2 {
+            animation: scale-up 1.5s 1.5s ease-in-out both;
+        }
+    
+        &__slide-effect-3 {
+            animation: scale-up 1.5s 2s ease-in-out both;
+        }
+
+        &__slide-effect-4 {
+            animation: scale-up 1.5s 2.5s ease-in-out both;
+        }
+    }
+
+    @keyframes scale-up {
+        0% {
+            transform: scaleX(0.4);
+            filter: blur(1px);
+            opacity: 0;
+        }
+    
+        100% {
+            transform: scaleX(1);
+            filter: blur(0);
+            opacity: 1;
+        }
+      }
+}

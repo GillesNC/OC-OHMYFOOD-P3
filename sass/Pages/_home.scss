@@ -170,3 +170,78 @@
     }
 
 }
+
+// Responsive Desktop
+
+@media screen and (min-width: 993px) and (max-width:1980px) {
+    //Section Fonctionnement
+    .container-functioning {
+        display: flex;
+        flex-wrap: wrap;
+        flex-direction: row;
+        @include flex-center;
+        justify-content: space-around;
+        width: 100%;
+        margin: 0;
+        height: 240px;
+
+        h2 {
+            width: 100%;
+            font-size: 30px;
+            text-align: center;
+        }
+
+        h2::after {
+            content:"";
+            display: flex;
+            width: 100px;
+            height: 4px;    
+            margin: auto;
+            margin-top: 10px;
+            border-radius: 10px;
+            background-color: $colour-tertiary;
+        }        
+
+        .choice {
+            display: flex;
+            width: 400px;
+        }
+    }
+
+    .container-restaurant {
+        display: flex;
+        flex-wrap: wrap;
+        width: 100%;
+        @include flex-center;
+        height: 700px;
+
+        h2 {
+            width: 100%;
+            font-size: 30px;
+            text-align: center;
+        }
+    
+        h2::after {
+            content:"";
+            display: flex;
+            width: 100px;
+            height: 4px;    
+            margin: auto;
+            margin-top: 10px;
+            border-radius: 10px;
+            background-color: $colour-tertiary;
+        }
+    
+        .card {
+            display: flex;
+            flex-direction: row;
+            flex-wrap: wrap;
+            width: 90%;
+            height: 80%;
+    
+            .card__element {
+                width: 45%;
+            }
+        }
+    }
+}
